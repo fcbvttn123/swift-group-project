@@ -8,7 +8,17 @@ import FirebaseAuth
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // Created by David
+    // Currently Sign-in User Information
+    // Will be changed after successful sign-in
+    var isLoggedIn: Bool = false
+    var username: String = ""
+    var givenName: String = ""
+    var email: String = ""
+    var imgUrl: URL?
+    
+    // Created by David
     // This code is used for Google Sign-in
+    var segueIdentiferForSignIn: String = "afterSignIn"
     func application(_ app: UIApplication,
                      open url: URL,
                      options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
