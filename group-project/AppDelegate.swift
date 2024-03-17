@@ -1,8 +1,14 @@
 import UIKit
+
+// Created by David
 // These Imports are used for Firebase - Authentication
 import FirebaseCore
 import GoogleSignIn
 import FirebaseAuth
+
+//Created by David
+// These Imports are used for Firebase - Firestore Database
+import FirebaseFirestore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,6 +34,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard let clientID = FirebaseApp.app()?.options.clientID else { return }
         let config = GIDConfiguration(clientID: clientID)
         GIDSignIn.sharedInstance.configuration = config
+    }
+    
+    // Created by David
+    // This function is used to fetch all account information from firestore
+    // This function is mostly used for checkCredentials() function
+    func fetchAccountInformationFromFirestore() async throws -> [String: Any] {
+        let collection = Firestore.firestore().collection("accounts")
+        let querySnapshot = try await collection.getDocuments()
+        var data = [String: Any]()
+        for document in querySnapshot.documents {
+            data[document.documentID] = document.data()
+        }
+        return data
+    }
+    
+    // Created by David
+    // This function is used to check entered credentials with all account information retrieved form the fetchAccountInformationFromFirestore()
+    // Check the README file for how to use this function 
+    func checkCredentials(userNameEntered: String, passwordEntered: String) async -> Bool {
+        do {
+            let fetchedData = try await fetchAccountInformationFromFirestore()
+            
+            for (_, value) in fetchedData {
+                // Check if value is a dictionary
+                guard let userData = value as? [String: Any],
+                      let username = userData["username"] as? String,
+                      let password = userData["password"] as? String else {
+                    continue
+                }
+                // Check if username and password match the arguments
+                if username == userNameEntered && password == passwordEntered {
+                    return true // Credentials match, return true
+                }
+            }
+            // No matching credentials found
+            return false
+        } catch {
+            print("Error fetching data from Firestore: \(error)")
+            // Return false in case of any error
+            return false
+        }
     }
     
     // System Generated

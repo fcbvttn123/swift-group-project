@@ -6,7 +6,11 @@ import GoogleSignIn
 import FirebaseCore
 import FirebaseAuth
 
-class ViewController: UIViewController {
+//Created by David
+// These Imports are used for Firebase - Firestore Database
+import FirebaseFirestore
+
+class ViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +24,42 @@ class ViewController: UIViewController {
         mainDelegate.setupGoogleSignIn()
     }
     
+    // Created by David
+    // Firestore - Write Data - Register Account - Still working on...
+    @IBAction func writeData(_ sender: UIButton) {
+        let collection = Firestore.firestore().collection("accounts")
+        collection.addDocument(data: ["username": "abc1", "password": "123"]) {
+            error in
+            if let error = error {
+                print("Error adding document: \(error)")
+            } else {
+                print("Document added successfully!")
+            }
+        }
+    }
+    
+    // Created by David
+    // This is an example of how to use the checkCredentials() function
+    @IBOutlet var username: UITextField!
+    @IBOutlet var password: UITextField!
+    @IBOutlet var btn: UIButton!
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return textField.resignFirstResponder()
+    }
+    @IBAction func signIn(_ sender: UIButton) {
+        let mainDelegate = UIApplication.shared.delegate as! AppDelegate
+        Task {
+            let success = await mainDelegate.checkCredentials(userNameEntered: username.text!, passwordEntered: password.text!)
+            if success {
+                performSegue(withIdentifier: mainDelegate.segueIdentiferForSignIn, sender: nil)
+                mainDelegate.isLoggedIn = true
+            }
+        }
+    }
+    
     // Created by David.
     // When button is clicked, this function will start the Google Sign-in process.
-    // After signning in, the user information should be saved in AppDelegate. For now, I will print the user information to console.
+    // After signning in, the user information is saved in AppDelegate. 
     // Steps to move this function to any ViewController:
         // Put these 2 lines in viewDidLoad() method
             // let mainDelegate = UIApplication.shared.delegate as! AppDelegate

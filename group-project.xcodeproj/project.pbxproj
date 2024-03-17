@@ -16,6 +16,7 @@
 		CE1198562BA290FB00FD8B96 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE1198552BA290FB00FD8B96 /* GoogleService-Info.plist */; };
 		CE1198592BA2925000FD8B96 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = CE1198582BA2925000FD8B96 /* GoogleSignIn */; };
 		CE11985E2BA2983200FD8B96 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CE11985D2BA2983200FD8B96 /* FirebaseAuth */; };
+		CED5F8F22BA5CB8500A3D627 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CED5F8F12BA5CB8500A3D627 /* FirebaseFirestore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 			files = (
 				CE1198592BA2925000FD8B96 /* GoogleSignIn in Frameworks */,
 				CE11985E2BA2983200FD8B96 /* FirebaseAuth in Frameworks */,
+				CED5F8F22BA5CB8500A3D627 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +103,7 @@
 			packageProductDependencies = (
 				CE1198582BA2925000FD8B96 /* GoogleSignIn */,
 				CE11985D2BA2983200FD8B96 /* FirebaseAuth */,
+				CED5F8F12BA5CB8500A3D627 /* FirebaseFirestore */,
 			);
 			productName = "group-project";
 			productReference = CE11982E2BA232FF00FD8B96 /* group-project.app */;
@@ -410,6 +413,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CE1198472BA2339800FD8B96 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		CED5F8F12BA5CB8500A3D627 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE1198472BA2339800FD8B96 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
