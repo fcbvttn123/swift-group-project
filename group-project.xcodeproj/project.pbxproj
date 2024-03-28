@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0D42E32BB4EF3D00900E9F /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0D42E22BB4EF3D00900E9F /* SignUpScreen.swift */; };
 		CE1198322BA232FF00FD8B96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1198312BA232FF00FD8B96 /* AppDelegate.swift */; };
 		CE1198342BA232FF00FD8B96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1198332BA232FF00FD8B96 /* SceneDelegate.swift */; };
 		CE1198362BA232FF00FD8B96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1198352BA232FF00FD8B96 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE0D42E22BB4EF3D00900E9F /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
 		CE11982E2BA232FF00FD8B96 /* group-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "group-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1198312BA232FF00FD8B96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE1198332BA232FF00FD8B96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE0D42E12BB4EF0800900E9F /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				CE1198352BA232FF00FD8B96 /* ViewController.swift */,
+				CE0D42E22BB4EF3D00900E9F /* SignUpScreen.swift */,
+			);
+			path = screens;
+			sourceTree = "<group>";
+		};
 		CE1198252BA232FF00FD8B96 = {
 			isa = PBXGroup;
 			children = (
@@ -65,10 +76,10 @@
 		CE1198302BA232FF00FD8B96 /* group-project */ = {
 			isa = PBXGroup;
 			children = (
+				CE0D42E12BB4EF0800900E9F /* screens */,
 				CE1198552BA290FB00FD8B96 /* GoogleService-Info.plist */,
 				CE1198312BA232FF00FD8B96 /* AppDelegate.swift */,
 				CE1198332BA232FF00FD8B96 /* SceneDelegate.swift */,
-				CE1198352BA232FF00FD8B96 /* ViewController.swift */,
 				CE1198372BA232FF00FD8B96 /* Main.storyboard */,
 				CE11983A2BA2330000FD8B96 /* Assets.xcassets */,
 				CE11983C2BA2330000FD8B96 /* LaunchScreen.storyboard */,
@@ -168,6 +179,7 @@
 				CE1198362BA232FF00FD8B96 /* ViewController.swift in Sources */,
 				CE1198322BA232FF00FD8B96 /* AppDelegate.swift in Sources */,
 				CE1198342BA232FF00FD8B96 /* SceneDelegate.swift in Sources */,
+				CE0D42E32BB4EF3D00900E9F /* SignUpScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,7 +6,7 @@ import GoogleSignIn
 import FirebaseCore
 import FirebaseAuth
 
-//Created by David
+// Created by David
 // These Imports are used for Firebase - Firestore Database
 import FirebaseFirestore
 
@@ -25,17 +25,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     // Created by David
-    // Firestore - Write Data - Register Account - Still working on...
-    @IBAction func writeData(_ sender: UIButton) {
-        let collection = Firestore.firestore().collection("accounts")
-        collection.addDocument(data: ["username": "abc1", "password": "123"]) {
-            error in
-            if let error = error {
-                print("Error adding document: \(error)")
-            } else {
-                print("Document added successfully!")
-            }
-        }
+    // This function is used to come back to this view controller
+    @IBAction func toLoginScreen(sender: UIStoryboardSegue) {
+        
     }
     
     // Created by David
