@@ -17,6 +17,9 @@
 		CE1198562BA290FB00FD8B96 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE1198552BA290FB00FD8B96 /* GoogleService-Info.plist */; };
 		CE1198592BA2925000FD8B96 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = CE1198582BA2925000FD8B96 /* GoogleSignIn */; };
 		CE11985E2BA2983200FD8B96 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CE11985D2BA2983200FD8B96 /* FirebaseAuth */; };
+		CE155B1B2BB9E0CD00E45A2A /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE155B1A2BB9E0CD00E45A2A /* MapScreen.swift */; };
+		CE155B1D2BB9E0F900E45A2A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE155B1C2BB9E0F800E45A2A /* CoreLocation.framework */; };
+		CE155B1F2BB9E10000E45A2A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE155B1E2BB9E0FF00E45A2A /* MapKit.framework */; };
 		CED5F8F22BA5CB8500A3D627 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CED5F8F12BA5CB8500A3D627 /* FirebaseFirestore */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +34,9 @@
 		CE11983D2BA2330000FD8B96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE11983F2BA2330000FD8B96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE1198552BA290FB00FD8B96 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE155B1A2BB9E0CD00E45A2A /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
+		CE155B1C2BB9E0F800E45A2A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CE155B1E2BB9E0FF00E45A2A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +44,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE155B1D2BB9E0F900E45A2A /* CoreLocation.framework in Frameworks */,
 				CE1198592BA2925000FD8B96 /* GoogleSignIn in Frameworks */,
+				CE155B1F2BB9E10000E45A2A /* MapKit.framework in Frameworks */,
 				CE11985E2BA2983200FD8B96 /* FirebaseAuth in Frameworks */,
 				CED5F8F22BA5CB8500A3D627 /* FirebaseFirestore in Frameworks */,
 			);
@@ -52,6 +60,7 @@
 			children = (
 				CE1198352BA232FF00FD8B96 /* ViewController.swift */,
 				CE0D42E22BB4EF3D00900E9F /* SignUpScreen.swift */,
+				CE155B1A2BB9E0CD00E45A2A /* MapScreen.swift */,
 			);
 			path = screens;
 			sourceTree = "<group>";
@@ -91,6 +100,8 @@
 		CE11985C2BA2983200FD8B96 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE155B1E2BB9E0FF00E45A2A /* MapKit.framework */,
+				CE155B1C2BB9E0F800E45A2A /* CoreLocation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -180,6 +191,7 @@
 				CE1198322BA232FF00FD8B96 /* AppDelegate.swift in Sources */,
 				CE1198342BA232FF00FD8B96 /* SceneDelegate.swift in Sources */,
 				CE0D42E32BB4EF3D00900E9F /* SignUpScreen.swift in Sources */,
+				CE155B1B2BB9E0CD00E45A2A /* MapScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

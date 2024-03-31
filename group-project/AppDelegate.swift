@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // Created by David
     // This code is used for Google Sign-in
-    var segueIdentiferForSignIn: String = "afterSignIn"
+    var segueIdentiferForSignIn: String = "signInToMap"
     func application(_ app: UIApplication,
                      open url: URL,
                      options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
